@@ -5,6 +5,9 @@
  properly process file assets into a bundle. */
  const path = require('path');
  module.exports = {
+  /* This means that we are creating a minified and uglified production bundle, 
+  which compresses the codebase so that a client visiting our website can get the code delivered faster */
+  mode:  process.env.NODE_ENV,
   /* Set the client/index.js file as the entry. This is the initial file that Webpack parses through to make a dependency graph of all file assets to be bundled together, 
   including your entire frontend React code, imported node modules, imported CSS and image files, etc. */
   entry: './client/index.js',
@@ -21,11 +24,9 @@
       directory: path.resolve(__dirname, 'build'),
       publicPath: '/build'
     },
-    port: 8080
+    port: 8080,
+    hot: true
   },
-  /* This means that we are creating a minified and uglified production bundle, 
-  which compresses the codebase so that a client visiting our website can get the code delivered faster */
-  mode:  process.env.NODE_ENV,
   module: {
     rules: [
       { 

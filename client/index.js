@@ -6,5 +6,5 @@ import App from './components/App';
 
 render(
   <App />,
-  document.getElementById('root')
+  document.querySelector('#root')
 );
