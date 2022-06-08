@@ -1,0 +1,43 @@
+{
+  "name": "myJournal",
+  "version": "1.0.0",
+  "description": "A digital journaling app with sentiment analysis",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node server/server.js",
+    "build": "cross-env NODE_ENV=production webpack",
+    "dev": "concurrently \"NODE_ENV=development nodemon server/server.js\" \"NODE_ENV=development webpack serve --hot --open\""
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "build",
+      "client"
+    ]
+  },
+  "author": "Alina Gasperino",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.12.3",
+    "prop-types": "^15.6.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.2",
+    "@babel/preset-env": "^7.18.2",
+    "@babel/preset-react": "^7.17.12",
+    "babel-loader": "^8.2.5",
+    "concurrently": "^6.0.2",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.7.1",
+    "html-webpack-plugin": "^5.5.0",
+    "isomorphic-fetch": "^3.0.0",
+    "nodemon": "^2.0.7",
+    "sass": "^1.52.2",
+    "sass-loader": "^13.0.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.9.2"
+  }
+}
