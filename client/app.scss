@@ -394,8 +394,19 @@ button {
 	cursor: pointer;
 	transition: all 200ms ease-in-out;
 	&:hover {
-		background-color: rgba(0, 0, 0, 0.08);
+		background-color: rgba(103, 103, 103, 0.08);
 	}
+}
+
+.plus {
+  width: 30%;
+  -webkit-transition: width .2s ease-out;
+  -moz-transition: width .2s ease-out;
+  -o-transition: width .2s ease-out;
+  transition: width .2s ease-out;
+  &:hover {
+    width: 35%;
+  }
 }
 
 /* modal */

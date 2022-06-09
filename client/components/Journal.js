@@ -49,16 +49,12 @@ class Journal extends Component {
 
     return (
       <section className="mainSection">
-        {/* <Link to={'/createEntry'}>
-          <button
-            type="button"
-            className="btnSecondary"
-          >
-            Create Journal Entry
-          </button>
-        </Link> */}
       <div className="entryContainer">
-      <article className="addCard card entryCard"></article>
+      <article className="addCard card entryCard">
+        <svg viewBox="0 0 24 24" className="plus">
+    <path d="M 12 2 L 12 22 M 2 12 L 22 12" stroke="gray" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" />
+  </svg>
+      </article>
         {entryEl}
       </div>
     </section>
