@@ -18,21 +18,21 @@ journalEntryController.getAllEntries = (req, res, next) => {
     });
 };
 
-journalEntryController.addEntry = (req, res, next) => {
-  const { title, body, date } = req.body;
-  // add a new entry to the db
-  models.Entry.create({ title, body, date}).exec()
-    .then(entryDoc => {
-      res.locals.newEntry = entryDoc;
-      next();
-    })
-    .catch(err => {
-      const errObj = {
-        log: err.log,
-        message: { err: 'Error occurred in journalEntryController.addEntry.' }
-      };
-      next(errObj);
-    });
-};
+// journalEntryController.addEntry = (req, res, next) => {
+//   const { title, body } = req.body;
+//   // add a new entry to the db
+//   models.Entry.create({ title, body }).exec()
+//     .then(entryDoc => {
+//       res.locals.newEntry = entryDoc;
+//       next();
+//     })
+//     .catch(err => {
+//       const errObj = {
+//         log: err.log,
+//         message: { err: 'Error occurred in journalEntryController.addEntry.' }
+//       };
+//       next(errObj);
+//     });
+// };
 
 module.exports = journalEntryController;

@@ -1,20 +1,20 @@
 const mongoose = require('mongoose');
 
-// const MONGO_URI = ''
+const MONGO_URI = 'mongodb+srv://alina:12345@cluster0.mqifs.mongodb.net/?retryWrites=true&w=majority'
 
 mongoose.connect(MONGO_URI, {
   // options for the connect method to parse the URI
   useNewUrlParser: true,
   useUnifiedTopology: true,
   // sets the name of the DB that our collections are part of
-  dbName: 'starwars'
+  dbName: 'react-journal'
 })
   .then(() => console.log('Connected to Mongo DB.'))
   .catch(err => console.log(err));
 
 const Schema = mongoose.Schema;
 
-const journalEntry = new Schema({
+const entrySchema = new Schema({
   title: {
     type: String,
     required: true,
@@ -22,8 +22,11 @@ const journalEntry = new Schema({
   body: {
     type: String,
     required: true,
-  },
-  date: Date/*,
+  }/*,
+  date: {
+    type: Date,
+    default: Date.now
+  }*//*,
   tones: [
     {
       score: Number,
@@ -38,8 +41,8 @@ const journalEntry = new Schema({
   }*/
 });
 
-// creats a model for the 'journal entry' collection that will be part of the export
-const Entry = mongoose.model('entry', journalEntry);
+// creats a model for the 'entry' collection that will be part of the export
+const Entry = mongoose.model('entry', entrySchema);
 
 // exports all the models in an object to be used in the controller
 module.exports = {

@@ -25,7 +25,10 @@
       publicPath: '/build'
     },
     port: 8080,
-    hot: true
+    hot: true,
+    proxy: {
+      '/api': 'http://localhost:3000'
+    }
   },
   module: {
     rules: [

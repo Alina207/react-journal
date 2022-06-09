@@ -17,6 +17,7 @@
   "author": "Alina Gasperino",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.12.3",
     "mongoose": "^5.11.9",
     "node-fetch": "^2.3.0",

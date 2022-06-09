@@ -7,9 +7,9 @@ router.get('/',
   (req, res) => res.status(200).json(res.locals.entries)
 );
 
-router.post('/entry',
-  journalEntryController.addEntry,
-  (req, res) => res.status(200).json(res.locals.newEntry)
-);
+// router.post('/entry',
+//   journalEntryController.addEntry,
+//   (req, res) => res.status(200).json(res.locals.newEntry)
+// );
 
 module.exports = router;

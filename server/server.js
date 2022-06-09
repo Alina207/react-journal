@@ -1,5 +1,6 @@
 const path = require('path');
 const express = require('express');
+const cors = require('cors');
 const app = express();
 
 const apiRouter = require('./routes/api');
@@ -8,6 +9,7 @@ const PORT = 3000;
 
 // handle parsing of the request body
 app.use(express.json());
+app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 
 // statically serve everything in the build folder on the route '/build'
