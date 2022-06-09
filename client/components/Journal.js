@@ -58,6 +58,7 @@ class Journal extends Component {
           </button>
         </Link> */}
       <div className="entryContainer">
+      <article className="addCard card entryCard"></article>
         {entryEl}
       </div>
     </section>

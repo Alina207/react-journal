@@ -10,9 +10,14 @@ const EntryCard = ({
       <div className="entryHeadContainer">
         <h3 className="entryName">Title: {title}</h3>
       </div>
-      <ul className="entryDetailsList">
-        <li className="entryDetail">Body: {body}</li>
-      </ul>
+      <div className="cardBody">
+        <ul className="entryDetailsList">
+          <li className="entryDetail">Body: {body}</li>
+        </ul>
+        </div>
+      <div className="entryCardFooter">
+        <p>Date</p>
+      </div>
     </article>
   );
 }
