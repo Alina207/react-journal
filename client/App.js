@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
-// import { Switch, Route } from 'react-router-dom';
 
-import Journal from './Journal';
+import Journal from './components/Journal';
 // import CreateJournalEntry from './CreateJournalEntry';
+import Navbar from "./components/Navbar";
 
 const App = props => {
   return (
+    <>
+    <Navbar />
     <Journal/>
+    </>
   );
 };
 export default App;

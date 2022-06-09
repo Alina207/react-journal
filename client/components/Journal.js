@@ -49,8 +49,6 @@ class Journal extends Component {
 
     return (
       <section className="mainSection">
-      <header className="pageHeader">
-        <h2>Journal Entries</h2>
         {/* <Link to={'/createEntry'}>
           <button
             type="button"
@@ -59,7 +57,6 @@ class Journal extends Component {
             Create Journal Entry
           </button>
         </Link> */}
-      </header>
       <div className="entryContainer">
         {entryEl}
       </div>

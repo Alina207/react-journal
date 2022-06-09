@@ -22,23 +22,18 @@ const entrySchema = new Schema({
   body: {
     type: String,
     required: true,
-  }/*,
+  },
   date: {
     type: Date,
-    default: Date.now
-  }*//*,
-  tones: [
-    {
-      score: Number,
-      tone_id: String,
-      tone_name: String,
-    },
-  ],
-  user: {
-    type: Schema.Types.ObjectId,
-    ref: "User",
-    required: true,
-  }*/
+    default: Date.now // Returns the current unix timestamp as a number
+  },
+  createdAt: {
+    type: Date,
+    immutable: true // Best practice to make `createdAt` immutable
+  }
+},
+{
+  timestamps: true,
 });
 
 // creats a model for the 'entry' collection that will be part of the export
